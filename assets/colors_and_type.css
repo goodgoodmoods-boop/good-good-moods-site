@@ -1,0 +1,161 @@
+/* ============================================================
+   GOOD GOOD MOODS — Design Tokens
+   Colors + Typography  ·  Charte graphique v1.0 (2026)
+   "L'art urbain qui met tout le monde de bonne humeur."
+   ============================================================ */
+
+/* Fonts loaded from Google Fonts. Add this to your <head>:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
+   The logo lettering itself is hand-drawn — never set type to mimic it. */
+
+:root {
+  /* ---- PALETTE PRINCIPALE (tirée du médaillon) ---- */
+  --ggm-petrole: #306078;   /* Bleu pétrole — structure, apaise. La couleur de référence. */
+  --ggm-menthe:  #18F09C;   /* Vert menthe — énergie */
+  --ggm-soleil:  #F0C048;   /* Jaune soleil — énergie */
+  --ggm-corail:  #F0606C;   /* Corail — énergie */
+  --ggm-blanc:   #FCFCFC;   /* Blanc — fait respirer */
+
+  /* ---- SECONDAIRES (support & lisibilité) ---- */
+  --ggm-encre:   #13191C;   /* Encre — texte courant */
+  --ggm-creme:   #F4EFE6;   /* Crème — fond clair */
+  --ggm-violet:  #8A6CF0;   /* Violet — accent ponctuel, rare */
+
+  /* ---- TINTES DÉRIVÉES (échelle pétrole, pour fonds/bordures) ---- */
+  --ggm-petrole-900: #1d3b4a;
+  --ggm-petrole-700: #28526a;
+  --ggm-petrole-600: #306078;  /* = base */
+  --ggm-petrole-500: #427e9a;
+  --ggm-petrole-300: #7fa9bd;
+  --ggm-petrole-100: #d6e3ea;
+
+  /* ---- SEMANTIC : SURFACES ---- */
+  --bg:           var(--ggm-creme);    /* fond clair par défaut */
+  --bg-dark:      var(--ggm-petrole);  /* fond foncé signature */
+  --surface:      var(--ggm-blanc);    /* cartes sur fond crème */
+  --surface-ink:  var(--ggm-petrole-700);
+
+  /* ---- SEMANTIC : TEXTE ---- */
+  --fg1:          var(--ggm-encre);    /* texte principal sur clair */
+  --fg2:          #4a565c;             /* texte secondaire sur clair */
+  --fg-muted:     #7c878c;             /* mentions, légendes */
+  --fg-on-dark:   var(--ggm-blanc);    /* texte sur pétrole */
+  --fg-on-dark-2: #b9cdd7;             /* texte secondaire sur pétrole */
+
+  /* ---- SEMANTIC : ACCENTS / RÔLES ---- */
+  --accent:       var(--ggm-corail);   /* CTA, liens d'action */
+  --accent-2:     var(--ggm-menthe);
+  --accent-3:     var(--ggm-soleil);
+  --link:         var(--ggm-petrole);
+
+  /* Paires de contraste sûres (texte sur fond) :
+     blanc/pétrole ✓ · blanc/corail ✓ · encre/menthe ✓ · encre/jaune ✓
+     ❌ jamais de texte clair sur jaune ou menthe → utiliser --ggm-encre */
+  --on-menthe: var(--ggm-encre);
+  --on-soleil: var(--ggm-encre);
+  --on-corail: var(--ggm-blanc);
+  --on-petrole: var(--ggm-blanc);
+
+  /* ---- FAMILLES TYPO ---- */
+  --font-display: "Archivo Black", system-ui, sans-serif;   /* titrage qui claque */
+  --font-body:    "Space Grotesk", system-ui, sans-serif;   /* texte courant */
+  --font-accent:  "Bricolage Grotesque", system-ui, sans-serif; /* baselines, citations */
+
+  /* ---- ÉCHELLE TYPO (rôles) ---- */
+  --display:   clamp(3rem, 8vw, 6.5rem);  /* affiche / hero */
+  --h1:        clamp(2.5rem, 5vw, 4rem);
+  --h2:        clamp(1.875rem, 3.5vw, 2.75rem);
+  --h3:        1.375rem;   /* Space Grotesk Bold */
+  --body:      1.125rem;   /* ~18px */
+  --body-sm:   1rem;
+  --caption:   0.8125rem;  /* ~13px, majuscules espacées */
+
+  --lh-tight:  0.98;       /* titres serrés */
+  --lh-snug:   1.15;
+  --lh-body:   1.6;
+  --tracking-caption: 0.14em;
+
+  /* ---- RAYONS (capsules & blocs francs) ---- */
+  --r-xs: 6px;
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+  --r-pill: 999px;
+  --r-circle: 50%;
+
+  /* ---- ESPACEMENT (base 8) ---- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+  --sp-9: 96px; --sp-10: 128px;
+
+  /* ---- OMBRES (douces, jamais sous le logo) ---- */
+  --shadow-sm: 0 2px 8px rgba(19,25,28,0.08);
+  --shadow-md: 0 8px 24px rgba(19,25,28,0.12);
+  --shadow-lg: 0 18px 48px rgba(19,25,28,0.18);
+  --shadow-pop: 6px 6px 0 var(--ggm-encre); /* ombre dure "affiche/sticker" */
+
+  /* ---- MOTION ---- */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1); /* léger rebond joyeux */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+}
+
+/* ============================================================
+   ÉLÉMENTS DE BASE
+   ============================================================ */
+body {
+  font-family: var(--font-body);
+  font-size: var(--body);
+  line-height: var(--lh-body);
+  color: var(--fg1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+
+h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--h3);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+p { margin: 0 0 1em; max-width: 64ch; text-wrap: pretty; }
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--display);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.accent-text { font-family: var(--font-accent); font-weight: 600; }
+
+.caption, .overline {
+  font-family: var(--font-body);
+  font-size: var(--caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caption);
+  color: var(--fg-muted);
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+::selection { background: var(--ggm-menthe); color: var(--ggm-encre); }

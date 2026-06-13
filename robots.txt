@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://good-good-moods.netlify.app/sitemap.xml

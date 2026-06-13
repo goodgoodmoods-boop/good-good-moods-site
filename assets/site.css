@@ -1,0 +1,257 @@
+/* ============================================================
+   Good Good Moods — Landing page
+   Layout, theming (clair/sombre), motion & street motifs.
+   Brand tokens come from colors_and_type.css.
+   --accent / --on-accent are driven by the Tweaks panel (JS).
+   ============================================================ */
+
+:root {
+  /* accent par défaut = jaune soleil (réglable dans Tweaks) */
+  --accent: var(--ggm-soleil);
+  --on-accent: var(--ggm-encre);
+  /* surfaces sémantiques de page (override en mode sombre) */
+  --page-bg: var(--ggm-creme);
+  --page-surface: var(--ggm-blanc);
+  --page-fg: var(--ggm-encre);
+  --page-fg2: #4a565c;
+  --page-muted: #7c878c;
+  --page-line: #e6dfd2;
+  --page-card-border: #efe9dd;
+  --section-alt: #efe7d8;     /* crème un peu plus chaud pour alterner */
+}
+
+/* ---- MODE SOMBRE ---- */
+body.ggm-dark {
+  --page-bg: #0f1c24;          /* pétrole très profond */
+  --page-surface: #152832;
+  --page-fg: #f2f6f8;
+  --page-fg2: #b9cdd7;
+  --page-muted: #7e95a1;
+  --page-line: #21343f;
+  --page-card-border: #21343f;
+  --section-alt: #122029;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--page-bg);
+  color: var(--page-fg);
+  transition: background 320ms var(--ease-out), color 320ms var(--ease-out);
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.ggm-wrap { max-width: 1200px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+
+/* Titre display utilitaire */
+.ggm-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Mot surligné "au marqueur" */
+.ggm-marker {
+  position: relative;
+  white-space: nowrap;
+  z-index: 0;
+}
+.ggm-marker::after {
+  content: "";
+  position: absolute;
+  left: -0.08em; right: -0.08em; bottom: 0.04em;
+  height: 0.42em;
+  background: var(--accent);
+  z-index: -1;
+  transform: rotate(-1.2deg) skewX(-8deg);
+  border-radius: 3px;
+  opacity: 0.92;
+}
+
+/* Tag filigrane (blaze discret en fond de section) */
+.ggm-filigrane {
+  position: absolute;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  opacity: 0.05;
+}
+
+/* Numéro d'index éditorial */
+.ggm-index {
+  font-family: var(--font-display);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* ---- SCROLL REVEAL ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 620ms var(--ease-out), transform 620ms var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 80ms; }
+.reveal.d2 { transition-delay: 160ms; }
+.reveal.d3 { transition-delay: 240ms; }
+.reveal.d4 { transition-delay: 320ms; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---- HERO ÉDITORIAL (inspiré planche street) ---- */
+.hero-edito-grid {
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 44px;
+  align-items: center;
+  padding-top: 148px;
+  padding-bottom: 86px;
+  min-height: 92vh;
+}
+.hero-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.02fr 0.78fr;
+  align-items: center;
+}
+.hero-figure {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  height: clamp(420px, 60vh, 560px);
+  box-shadow: var(--shadow-lg);
+}
+.hero-panel {
+  position: relative;
+  z-index: 2;
+  margin-left: -56px;
+  background: var(--page-surface);
+  border: 1px solid var(--page-card-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 22px 22px 22px 26px;
+  overflow: hidden;
+}
+.hero-panel-tab {
+  position: absolute;
+  top: 26px; bottom: 26px; right: -16px;
+  width: 30px;
+  border-radius: var(--r-pill);
+  background: var(--accent);
+}
+.hero-rail { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+
+@media (max-width: 1080px) {
+  .hero-edito-grid { grid-template-columns: 1fr; gap: 36px; min-height: 0; padding-top: 128px; }
+  .hero-stage { grid-template-columns: 1fr; gap: 0; }
+  .hero-figure { height: clamp(340px, 56vh, 460px); }
+  .hero-panel { margin-left: 0; margin-top: -28px; margin-right: 8px; }
+  .hero-panel-tab { display: none; }
+}
+@media (max-width: 560px) {
+  .hero-panel { margin-left: 0; }
+}
+
+/* ---- GRID HELPERS (responsive) ---- */
+.ggm-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.ggm-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ggm-piliers-grid  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ggm-publics-grid  { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.ggm-steps-grid    { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+/* Galerie réalisations : mosaïque */
+.ggm-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 170px;
+  gap: 14px;
+}
+
+/* Galerie groupée par projet — cartes (1 par projet) */
+.ggm-proj-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.ggm-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 240ms ease, transform 240ms var(--ease-pop);
+}
+.ggm-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.ggm-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 560ms var(--ease-out); }
+.ggm-card:hover .ggm-card-img { transform: scale(1.07); }
+
+@media (max-width: 860px) { .ggm-proj-cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .ggm-proj-cards { grid-template-columns: 1fr; } .ggm-card { height: 240px; } }
+
+/* Lightbox projet */
+.ggm-lb {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  background: rgba(10, 20, 26, 0.85);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  animation: ggm-fade 180ms ease;
+}
+@keyframes ggm-fade { from { opacity: 0; } to { opacity: 1; } }
+.ggm-lb-panel {
+  width: min(980px, 100%);
+  max-height: 92vh;
+  display: flex; flex-direction: column;
+  background: var(--page-surface);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.ggm-lb-stage {
+  position: relative;
+  background: #0c1820;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 240px;
+}
+.ggm-lb-stage > img { max-width: 100%; max-height: 62vh; object-fit: contain; display: block; }
+.ggm-lb-thumbs { display: flex; gap: 8px; padding: 14px; overflow-x: auto; }
+.ggm-lb-thumb { flex: 0 0 auto; width: 92px; height: 64px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; padding: 0; background: none; transition: border-color 140ms ease; }
+.ggm-lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (max-width: 960px) {
+  .ggm-desktop-nav { display: none !important; }
+  .ggm-burger { display: inline-flex !important; }
+  .ggm-two-col { grid-template-columns: 1fr !important; gap: 36px; }
+  .ggm-hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .ggm-services-grid { grid-template-columns: 1fr 1fr !important; }
+  .ggm-piliers-grid { grid-template-columns: 1fr !important; }
+  .ggm-publics-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+  .ggm-steps-grid { grid-template-columns: 1fr 1fr !important; }
+  .ggm-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  .ggm-hide-mobile { display: none !important; }
+}
+@media (max-width: 560px) {
+  .ggm-wrap { padding-left: 18px; padding-right: 18px; }
+  .ggm-services-grid { grid-template-columns: 1fr !important; }
+  .ggm-publics-grid { grid-template-columns: 1fr 1fr !important; }
+  .ggm-steps-grid { grid-template-columns: 1fr !important; }
+}

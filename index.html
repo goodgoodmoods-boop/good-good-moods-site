@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Good Moods · Collectif d'art urbain · Laval (53)</title>
+<meta name="description" content="Good Good Moods, collectif d'art urbain à Laval (53) : graffiti, rap et scratch. Fresques, ateliers et événements pour entreprises, collectivités, écoles, établissements de soin et particuliers.">
+<!-- A METTRE A JOUR apres le deploiement Netlify : remplacer good-good-moods.netlify.app par l'URL reelle (canonical, og:url, og:image, twitter:image, sitemap.xml, robots.txt) -->
+<link rel="canonical" href="https://good-good-moods.netlify.app/">
+<meta name="theme-color" content="#306078">
+<meta name="author" content="Good Good Moods">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="graffiti Laval, fresque murale Mayenne, atelier graffiti, art urbain, street art Laval, collectif hip hop, live painting, DJ scratch">
+
+<!-- Open Graph / partage social -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Good Good Moods">
+<meta property="og:title" content="Good Good Moods · Collectif d'art urbain · Laval (53)">
+<meta property="og:description" content="Graffiti, rap et scratch. Fresques, ateliers et événements pour entreprises, collectivités, écoles et particuliers en Mayenne.">
+<meta property="og:url" content="https://good-good-moods.netlify.app/">
+<meta property="og:image" content="https://good-good-moods.netlify.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fresque coquelicots du collectif Good Good Moods">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Good Good Moods · Collectif d'art urbain · Laval">
+<meta name="twitter:description" content="Graffiti, rap et scratch. Fresques, ateliers et événements en Mayenne.">
+<meta name="twitter:image" content="https://good-good-moods.netlify.app/assets/og-image.jpg">
+
+<!-- Favicons & manifest -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
+
+<!-- Preload du visuel principal (LCP) -->
+<link rel="preload" as="image" href="photos/portrait.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/colors_and_type.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .brush-underline { display: block; }
+  .sec-head.on-dark h2 { color: #fff; }
+  .sec-head.on-dark p { color: var(--fg-on-dark-2); }
+  .drip svg { display: block; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Good Good Moods",
+  "description": "Collectif d'art urbain à Laval : graffiti, rap et scratch. Fresques murales, ateliers et événements.",
+  "image": "https://good-good-moods.netlify.app/assets/og-image.jpg",
+  "url": "https://good-good-moods.netlify.app/",
+  "email": "goodgoodmoods@gmail.com",
+  "areaServed": ["Laval", "Mayenne", "France"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Laval", "postalCode": "53000", "addressCountry": "FR" },
+  "sameAs": ["https://instagram.com/good_good_moods"],
+  "knowsAbout": ["graffiti", "fresque murale", "art urbain", "rap", "scratch", "ateliers graffiti", "live painting"]
+}
+</script>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header" class="ggm-header">
+  <div class="ggm-wrap ggm-headbar">
+    <a href="#top" data-goto="top" class="ggm-logo" aria-label="Good Good Moods, accueil">
+      <img class="logo-color" src="assets/logo-ggm-color.png" alt="Good Good Moods">
+      <img class="logo-white" src="assets/logo-ggm-white.png" alt="">
+      <strong>GOOD GOOD<br>MOODS</strong>
+    </a>
+    <nav class="ggm-desktop-nav" aria-label="Navigation principale">
+      <a href="#collectif" data-goto="collectif">Le collectif</a>
+      <a href="#savoir-faire" data-goto="savoir-faire">Savoir-faire</a>
+      <a href="#ateliers" data-goto="ateliers">Ateliers</a>
+      <a href="#realisations" data-goto="realisations">Réalisations</a>
+      <a href="#contact" data-goto="contact">Contact</a>
+    </nav>
+    <div class="ggm-head-cta">
+      <a class="btn accent sm" href="#contact" data-goto="contact">Demander un devis</a>
+    </div>
+    <button id="burger" class="ggm-burger" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </div>
+  <div id="mobileMenu" class="ggm-mobile-menu ggm-wrap">
+    <a href="#collectif" data-goto="collectif">Le collectif</a>
+    <a href="#savoir-faire" data-goto="savoir-faire">Savoir-faire</a>
+    <a href="#ateliers" data-goto="ateliers">Ateliers</a>
+    <a href="#realisations" data-goto="realisations">Réalisations</a>
+    <a href="#contact" data-goto="contact">Contact</a>
+    <a class="btn accent" href="#contact" data-goto="contact" style="align-self:flex-start">Demander un devis</a>
+  </div>
+</header>
+
+<!-- ===================== HERO (cinematique) ===================== -->
+<section id="top" class="hero-cine">
+  <canvas class="hero-particles" aria-hidden="true"></canvas>
+  <div class="hero-cine-glow" aria-hidden="true"></div>
+  <button class="cine-arrow cine-prev" aria-label="Discipline précédente"><i data-lucide="chevron-left"></i></button>
+  <button class="cine-arrow cine-next" aria-label="Discipline suivante"><i data-lucide="chevron-right"></i></button>
+  <div class="hero-cine-inner">
+    <span class="cine-kicker">Collectif d'art urbain · Laval (53)</span>
+    <h1 class="cine-title"><span id="cineWord" class="cine-word">GRAFFITI</span></h1>
+    <div id="cineSub" class="cine-sub">LETTRES &amp; FRESQUES</div>
+    <p id="cineLede" class="cine-lede">On peint des murs qui racontent le quartier.</p>
+    <div class="cine-cta">
+      <a class="btn-cine" href="#contact" data-goto="contact">Demander un devis</a>
+      <a class="cine-link" href="#ateliers" data-goto="ateliers">S'inscrire à un atelier <i data-lucide="arrow-right"></i></a>
+    </div>
+    <div class="cine-dots" id="cineDots"><span class="on"></span><span></span><span></span></div>
+    <div class="cine-hint"><span></span> Survole pour interagir <span></span></div>
+  </div>
+</section>
+
+<!-- ===================== LE COLLECTIF ===================== -->
+<section id="collectif" class="collectif">
+  <div class="spray-grain" aria-hidden="true"></div>
+  <div class="ggm-wrap">
+    <div class="ggm-two-col" style="align-items:flex-start;margin-bottom:56px">
+      <div>
+        <span class="ovl">Le collectif</span>
+        <h2 class="ggm-display reveal">On crée ensemble,<br><span class="mark-corail">pour tout le monde</span></h2>
+      </div>
+      <div class="reveal d1 lead">
+        <p>Good Good Moods réunit des graffeurs, des DJ et des rappeurs autour d'une conviction simple : l'art urbain est pour tout le monde, sans distinction. Association loi 1901 basée à Laval, on intervient dans la Mayenne et bien au-delà.</p>
+        <p>Notre terrain de jeu : les murs, les quartiers, les écoles, les entreprises. Notre signature : les bonnes ondes. On va à l'essentiel, on fait avec les gens, et on repart toujours avec le sourire.</p>
+        <div class="values">
+          <span class="tag inkOutline">Art pour tous</span>
+          <span class="tag inkOutline">Bonnes ondes</span>
+          <span class="tag inkOutline">Convivialité</span>
+          <span class="tag inkOutline">Ancrage local</span>
+        </div>
+      </div>
+    </div>
+    <div class="ggm-piliers-grid">
+      <article class="pilier reveal d1">
+        <img src="photos/atelier-rt-2.jpg" alt="Atelier graffiti en action, pilier Graffiti" loading="lazy">
+        <div class="grad" aria-hidden="true"></div>
+        <div class="body">
+          <span class="badge menthe"><i data-lucide="spray-can"></i></span>
+          <h3>Graffiti</h3>
+          <p>Le geste, la couleur, la lettre. Du lettrage au réalisme, on peint des murs qui racontent le quartier.</p>
+        </div>
+      </article>
+      <article class="pilier reveal d2">
+        <img src="photos/open-mic.jpg" alt="Pilier Rap" loading="lazy" style="object-position:center 32%">
+        <div class="grad" aria-hidden="true"></div>
+        <div class="body">
+          <span class="badge accent"><i data-lucide="mic"></i></span>
+          <h3>Rap</h3>
+          <p>La voix du terrain. Écriture, scène ouverte et sons faits maison, on tend le micro à tout le monde.</p>
+        </div>
+      </article>
+      <article class="pilier reveal d3">
+        <img src="photos/platines.jpg" alt="Platines, pilier Scratch" loading="lazy" style="object-position:center 62%">
+        <div class="grad" aria-hidden="true"></div>
+        <div class="body">
+          <span class="badge petrole"><i data-lucide="disc-3"></i></span>
+          <h3>Scratch</h3>
+          <p>Les platines comme instrument. Sets et scratch qui mettent le feu, du quartier à la grande scène.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SAVOIR-FAIRE ===================== -->
+<section id="savoir-faire" class="savoir">
+  <div class="spray-grain" aria-hidden="true"></div>
+  <div class="ggm-wrap">
+    <div class="sec-flex" style="margin-bottom:38px">
+      <div class="sec-head">
+        <span class="ovl">Notre savoir-faire</span>
+        <h2 class="ggm-display reveal">Des murs, des sons,<br>des sourires</h2>
+        <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+      </div>
+      <p class="intro-note reveal d2">Une seule équipe pour votre projet, du premier croquis à la dernière bombe.</p>
+    </div>
+    <div class="ggm-services-grid">
+      <article class="service reveal d1"><span class="ico"><i data-lucide="paintbrush"></i></span><h3>Fresques murales</h3><p>Façades, halls, préaux, déco intérieure. On conçoit et on peint des fresques sur-mesure, avec et pour celles et ceux qui vivent le lieu.</p><div class="who"><i data-lucide="users-round"></i><span>Entreprises · Collectivités · Écoles · Établissements de soin · Particuliers</span></div></article>
+      <article class="service reveal d2"><span class="ico"><i data-lucide="spray-can"></i></span><h3>Ateliers &amp; initiations</h3><p>Premiers gestes à la bombe, lettrage, fresque collective. Encadrés, sécurisés, matériel fourni. Repartez avec votre première pièce.</p><div class="who"><i data-lucide="users-round"></i><span>Tous publics, dès 12 ans · Groupes</span></div></article>
+      <article class="service reveal d3"><span class="ico"><i data-lucide="zap"></i></span><h3>Live painting &amp; performances</h3><p>Création en direct devant votre public. Le mur prend vie pendant l'événement, sous les yeux des invités.</p><div class="who"><i data-lucide="users-round"></i><span>Événements · Marques · Festivals</span></div></article>
+      <article class="service reveal d1"><span class="ico"><i data-lucide="disc-3"></i></span><h3>Animations &amp; événementiel</h3><p>Sets DJ, scratch, open mic, block party. On met l'ambiance et on cale la scène, clé en main.</p><div class="who"><i data-lucide="users-round"></i><span>Soirées · Inaugurations · Fêtes de quartier</span></div></article>
+      <article class="service reveal d2"><span class="ico"><i data-lucide="users"></i></span><h3>Team building créatif</h3><p>Une fresque collective qui soude les équipes. Brut, fun, mémorable, et un souvenir qui reste au mur.</p><div class="who"><i data-lucide="users-round"></i><span>Entreprises · CSE · Séminaires</span></div></article>
+      <article class="service reveal d3"><span class="ico"><i data-lucide="graduation-cap"></i></span><h3>Stages &amp; médiation</h3><p>Programmes en milieu scolaire et médico-social. L'art urbain comme outil de lien et d'expression.</p><div class="who"><i data-lucide="users-round"></i><span>Écoles · Jeunesse · Établissements de soin</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POUR QUI ===================== -->
+<section id="pour-qui" class="pourqui">
+  <div class="ggm-wrap">
+    <div class="sec-head center">
+      <span class="ovl center">Pour qui</span>
+      <h2 class="ggm-display reveal">On bosse avec tout le monde</h2>
+      <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true" style="margin-left:auto;margin-right:auto"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+      <p class="reveal d1">Du gamin de 12 ans au conseil municipal : la culture hip-hop crée du lien, met de la couleur et rassemble. Voilà ce qu'on apporte, à chaque fois.</p>
+    </div>
+    <div class="ggm-publics-grid" style="margin-top:48px">
+      <div class="public reveal d1"><span class="ico"><i data-lucide="building-2"></i></span><h3>Entreprises</h3><p>Façades, halls, team building, événements de marque.</p></div>
+      <div class="public reveal d2"><span class="ico"><i data-lucide="landmark"></i></span><h3>Collectivités</h3><p>Murs de ville, médiation, fêtes de quartier.</p></div>
+      <div class="public reveal d3"><span class="ico"><i data-lucide="school"></i></span><h3>Écoles</h3><p>Fresques participatives et ateliers pédagogiques.</p></div>
+      <div class="public reveal d4"><span class="ico"><i data-lucide="heart-pulse"></i></span><h3>Établissements de soin</h3><p>Des lieux plus doux, créés avec les résidents.</p></div>
+      <div class="public reveal d1"><span class="ico"><i data-lucide="home"></i></span><h3>Particuliers</h3><p>Un mur, un garage, une pièce, votre déco unique.</p></div>
+    </div>
+    <div class="reveal" style="margin-top:64px;text-align:center">
+      <div class="clients-lbl">Ils nous font confiance</div>
+      <div class="logo-wall">
+        <div class="logo-tile"><img src="photos/logo_laval_RVB_fond.png" alt="Ville de Laval" loading="lazy"></div>
+        <div class="logo-tile"><img src="photos/logo-cultura.webp" alt="Cultura" loading="lazy"></div>
+        <div class="logo-tile"><img src="photos/LOGO_Gruau_2022.svg" alt="Gruau" loading="lazy"></div>
+        <div class="logo-tile"><img src="photos/grassin_logo_2020.jpg" alt="Grassin Décors" loading="lazy"></div>
+        <div class="logo-tile"><img src="photos/jefco-peinture-marseille.png" alt="Jefco Peintures" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RÉALISATIONS ===================== -->
+<section id="realisations" class="realisations">
+  <div class="spray-grain" aria-hidden="true"></div>
+  <div class="ggm-wrap">
+    <div class="sec-flex" style="margin-bottom:28px">
+      <div class="sec-head">
+        <span class="ovl">Réalisations</span>
+        <h2 class="ggm-display reveal">Du graff plein<br>les murs</h2>
+        <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+        <p class="reveal d1">Un projet, une photo. Clique sur un mur pour ouvrir le chantier et voir toutes les images.</p>
+      </div>
+      <a class="btn ghost sm" href="#contact" data-goto="contact" style="margin-bottom:6px">Voir un projet comme le vôtre</a>
+    </div>
+    <div id="projGrid" class="ggm-proj-cards"></div>
+    <p class="foot-note">Fresques et événements réalisés par le collectif, Laval, Mayenne et alentours.</p>
+  </div>
+</section>
+
+<!-- ===================== ÉVÈNEMENTS ===================== -->
+<section id="evenements" class="evenements">
+  <div class="ggm-wrap">
+    <div class="sec-flex" style="margin-bottom:40px">
+      <div class="sec-head">
+        <span class="ovl">Évènements</span>
+        <h2 class="ggm-display reveal">On rassemble,<br>en vrai</h2>
+        <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+      </div>
+      <p class="reveal d2 ggm-hide-mobile" style="font-family:var(--font-accent);font-weight:600;font-size:17px;color:var(--page-fg2);max-width:30ch;margin:0">On ne fait pas que peindre : on réunit le quartier autour de l'art urbain.</p>
+    </div>
+
+    <div class="group-label reveal"><span class="dot"></span><h3>À venir</h3><span class="line"></span></div>
+    <article class="upcoming reveal">
+      <div class="up-visual up-poster">
+        <img src="photos/edl2-affiche.jpg" alt="Affiche L'État des lieux #2, 26 et 27 septembre 2026, ancien hippodrome de Laval" loading="lazy">
+        <span class="up-tag"><span class="tag accent"><i data-lucide="zap"></i> Prochaine édition</span></span>
+      </div>
+      <div class="up-body">
+        <h3 class="ggm-display">L'État des lieux #2</h3>
+        <div class="up-meta">
+          <span><i data-lucide="map-pin"></i> Ancien hippodrome de Laval · Salle Jeff Lemoine</span>
+          <span><i data-lucide="calendar"></i> 26 &amp; 27 septembre 2026</span>
+        </div>
+        <p>On remet ça : une nouvelle édition de notre festival d'art urbain. Jam graffiti, scratch, open mic. Réserve la date, on dévoile le programme très vite.</p>
+        <div class="up-pills">
+          <span class="tag light">Jam graffiti</span>
+          <span class="tag light">Live painting</span>
+          <span class="tag light">Scratch &amp; DJ</span>
+          <span class="tag light">Open mic</span>
+        </div>
+        <div class="up-cta">
+          <a class="btn sticker lg" href="#contact" data-goto="contact"><i data-lucide="zap"></i> Je veux participer</a>
+          <a class="btn ghostLight lg" href="https://instagram.com/good_good_moods" target="_blank" rel="noopener">Suivre l'actu</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="group-label reveal" style="margin-top:56px"><span class="dot"></span><h3>C'était avec vous</h3><span class="cnt">3 rendez-vous</span><span class="line"></span></div>
+    <div id="eventGrid" class="ggm-proj-cards"></div>
+
+    <p class="foot-note">Toute l'actu et les prochaines dates sur Instagram <a href="https://instagram.com/good_good_moods" target="_blank" rel="noopener" style="color:var(--page-fg);font-weight:700">@good_good_moods</a>.</p>
+  </div>
+</section>
+
+<!-- ===================== VIDÉOS ===================== -->
+<section id="videos" class="videos">
+  <div class="ggm-wrap">
+    <div class="sec-head center">
+      <span class="ovl center">Vidéos</span>
+      <h2 class="ggm-display reveal">Le collectif en mouvement</h2>
+      <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true" style="margin-left:auto;margin-right:auto"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="video-grid reveal" style="margin-top:40px">
+      <div class="video-row tall">
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-1-poster.jpg"><source src="videos/video-1.mp4" type="video/mp4"></video><figcaption>Robert Tatin</figcaption></figure>
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-3-poster.jpg"><source src="videos/video-3.mp4" type="video/mp4"></video><figcaption>Le 40</figcaption></figure>
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-5-poster.jpg"><source src="videos/video-5.mp4" type="video/mp4"></video><figcaption>Souk</figcaption></figure>
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-6-poster.jpg"><source src="videos/video-6.mp4" type="video/mp4"></video><figcaption>Custom Gruau</figcaption></figure>
+      </div>
+      <div class="video-row wide">
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-2-poster.jpg"><source src="videos/video-2.mp4" type="video/mp4"></video><figcaption>La Légumerie x GGM</figcaption></figure>
+        <figure><video class="vid" controls preload="none" playsinline poster="videos/video-4-poster.jpg"><source src="videos/video-4.mp4" type="video/mp4"></video><figcaption>L'État des lieux</figcaption></figure>
+      </div>
+    </div>
+    <p class="foot-note" style="text-align:center;margin-top:22px">Encore plus de vidéos sur Instagram <a href="https://instagram.com/good_good_moods" target="_blank" rel="noopener" style="color:var(--page-fg);font-weight:700">@good_good_moods</a>.</p>
+  </div>
+</section>
+
+<!-- ===================== COMMENT ÇA SE PASSE ===================== -->
+<section class="process">
+  <div class="spray-grain light" aria-hidden="true"></div>
+  <div class="drip flip" aria-hidden="true"><svg width="100%" height="28" preserveAspectRatio="none" viewBox="0 0 1200 28"><path d="M0,0 H1200 V11 C1135,28 1095,8 1045,17 C982,28 944,6 884,15 C824,25 784,4 724,13 C652,26 612,6 540,15 C470,26 430,4 360,13 C300,23 250,8 190,17 C130,28 90,8 0,15 Z" fill="var(--ggm-petrole)"/></svg></div>
+  <div class="ggm-filigrane" aria-hidden="true">MOODS</div>
+  <div class="ggm-wrap">
+    <div class="sec-head center on-dark">
+      <span class="ovl center">Comment ça se passe</span>
+      <h2 class="ggm-display reveal">Simple, carré, sans prise de tête</h2>
+      <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true" style="margin-left:auto;margin-right:auto"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+      <p class="reveal d1">Pour les pros comme pour les particuliers, on déroule le même fil clair, du premier contact au mur fini.</p>
+    </div>
+    <div class="ggm-steps-grid" style="margin-top:52px">
+      <div class="step reveal d1"><div class="top"><span class="idx">01</span><span class="ico"><i data-lucide="message-circle"></i></span></div><h3>On échange</h3><p>Un appel, un café, une visite du lieu. On écoute votre besoin, votre public et vos contraintes.</p></div>
+      <div class="step reveal d2"><div class="top"><span class="idx">02</span><span class="ico"><i data-lucide="file-text"></i></span></div><h3>On chiffre</h3><p>Devis clair et détaillé sous quelques jours. Pas de jargon, pas de mauvaise surprise.</p></div>
+      <div class="step reveal d3"><div class="top"><span class="idx">03</span><span class="ico"><i data-lucide="spray-can"></i></span></div><h3>On crée</h3><p>Croquis validés, préparation des supports, puis place à la bombe. Propre, cadré, en sécurité.</p></div>
+      <div class="step reveal d4"><div class="top"><span class="idx">04</span><span class="ico"><i data-lucide="party-popper"></i></span></div><h3>On restitue</h3><p>Inauguration, photos, et un mur qui vous ressemble. Les bonnes ondes en bonus.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ATELIERS ===================== -->
+<section id="ateliers" class="ateliers">
+  <div class="ggm-wrap">
+    <div class="ggm-two-col" style="align-items:stretch;gap:48px">
+      <div class="atelier-mosaic reveal">
+        <img src="photos/atelier-rt-3.jpg" alt="Atelier graffiti animé par le collectif" loading="lazy" style="object-position:center 35%">
+        <img src="photos/A37.jpg" alt="Initiation graffiti en cours" loading="lazy">
+        <img src="photos/A24.jpg" alt="Atelier en action à la bombe" loading="lazy">
+        <img src="photos/A13.jpg" alt="Atelier collectif au festival" loading="lazy">
+        <span class="atelier-tag"><span class="tag accent"><i data-lucide="spray-can"></i> Matos fourni</span></span>
+      </div>
+      <div class="atelier-body reveal d1">
+        <span class="ovl">Les ateliers</span>
+        <h2 class="ggm-display">Prends la bombe,<br>on s'occupe du reste</h2>
+        <p>Nos initiations graffiti sont ouvertes à tous les publics. Une heure ou plusieurs jours, en solo, en classe ou entre collègues : on transmet le geste, les couleurs et la culture, dans la bonne humeur.</p>
+        <div class="benefits">
+          <div class="benefit"><span class="ico"><i data-lucide="sparkles"></i></span><div><strong>Accessible à tous</strong><div>Dès 12 ans, débutants bienvenus. On s'adapte à chaque groupe.</div></div></div>
+          <div class="benefit"><span class="ico"><i data-lucide="shield-check"></i></span><div><strong>Encadré &amp; sécurisé</strong><div>Animateurs expérimentés, matériel et protections fournis.</div></div></div>
+          <div class="benefit"><span class="ico"><i data-lucide="palette"></i></span><div><strong>On repart avec sa pièce</strong><div>Chacun crée son lettrage ou participe à la fresque collective.</div></div></div>
+        </div>
+        <div class="formats">
+          <span class="tag inkOutline">Initiation 2 h</span>
+          <span class="tag inkOutline">Demi-journée</span>
+          <span class="tag inkOutline">Stage sur plusieurs jours</span>
+          <span class="tag inkOutline">Fresque participative</span>
+          <span class="tag inkOutline">Anniversaire</span>
+          <span class="tag inkOutline">Séminaire d'équipe</span>
+        </div>
+        <div><a class="btn sticker lg" href="#contact" data-goto="contact"><i data-lucide="calendar"></i> S'inscrire ou demander les dates</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="faq">
+  <div class="ggm-wrap">
+    <div class="sec-head center">
+      <span class="ovl center">Questions fréquentes</span>
+      <h2 class="ggm-display reveal">Ce qu'on nous demande souvent</h2>
+      <svg class="brush-underline" width="132" height="14" viewBox="0 0 132 14" fill="none" aria-hidden="true" style="margin-left:auto;margin-right:auto"><path d="M3 8.5 C34 4, 58 11, 86 6.5 C104 3.6, 118 9, 129 6" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="faq-list reveal d1" style="margin-top:40px">
+      <details class="faq-item"><summary>Combien coûte une fresque ?</summary><div class="faq-a">Chaque projet est unique : surface, support, complexité, accès. On en discute, puis on établit un devis gratuit et détaillé. Pas de jargon, pas de mauvaise surprise.</div></details>
+      <details class="faq-item"><summary>Vous intervenez où ?</summary><div class="faq-a">Laval, la Mayenne et les alentours en priorité. Pour les plus gros projets, on se déplace partout en France.</div></details>
+      <details class="faq-item"><summary>Faut-il une autorisation pour une fresque extérieure ?</summary><div class="faq-a">Sur une façade visible ou l'espace public, oui. On vous accompagne dans les démarches auprès de la mairie ou du propriétaire.</div></details>
+      <details class="faq-item"><summary>Les ateliers conviennent-ils aux débutants et aux enfants ?</summary><div class="faq-a">Oui, dès 12 ans et sans aucun prérequis. Matériel et protections fournis, encadrement par des animateurs expérimentés.</div></details>
+      <details class="faq-item"><summary>Combien de temps pour réaliser une fresque ?</summary><div class="faq-a">De quelques heures à plusieurs jours selon la surface et le niveau de détail. On vous donne un planning clair dès le devis.</div></details>
+      <details class="faq-item"><summary>Peut-on choisir le thème et les couleurs ?</summary><div class="faq-a">Bien sûr. On part de vos envies, on propose un croquis, et on ajuste ensemble avant la première bombe.</div></details>
+      <details class="faq-item"><summary>Travaillez-vous aussi en intérieur ?</summary><div class="faq-a">Oui : halls, bureaux, chambres, commerces, salles de sport. On protège soigneusement les sols et le mobilier.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact">
+  <div class="ggm-wrap">
+    <div class="ggm-two-col" style="align-items:flex-start;gap:56px">
+      <div class="reveal">
+        <span class="ovl">Contact</span>
+        <h2 class="ggm-display">On en parle ?</h2>
+        <p class="invite">Un projet de fresque, une prestation, ou l'envie de t'initier au graff ? Écris-nous : on répond vite, et toujours avec le sourire.</p>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:goodgoodmoods@gmail.com">
+            <span class="ic petrole"><i data-lucide="mail"></i></span>
+            <span><strong>goodgoodmoods@gmail.com</strong><span class="sub">Réponse sous 48 h</span></span>
+          </a>
+          <a class="contact-item" href="https://instagram.com/good_good_moods" target="_blank" rel="noopener">
+            <span class="ic accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <span><strong>@good_good_moods</strong><span class="sub">Suis nos murs au jour le jour</span></span>
+          </a>
+          <div class="contact-item">
+            <span class="ic petrole"><i data-lucide="map-pin"></i></span>
+            <span><strong>Laval &amp; alentours (53)</strong><span class="sub">Mayenne · interventions régionales &amp; nationales</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="contactCard" class="contact-card reveal d1">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:flex;flex-direction:column;gap:18px">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="type" id="typeInput" value="projet">
+          <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+          <div>
+            <span style="font-family:var(--font-body);font-weight:700;font-size:13px;color:var(--page-fg);display:block;margin-bottom:9px">Ta demande</span>
+            <div class="type-grid">
+              <button type="button" class="type-btn on" data-type="projet"><i data-lucide="briefcase"></i> Projet / devis</button>
+              <button type="button" class="type-btn" data-type="atelier"><i data-lucide="spray-can"></i> Atelier</button>
+            </div>
+          </div>
+          <label class="field" for="f-nom"><span>Nom</span><input id="f-nom" name="nom" type="text" required placeholder="Prénom &amp; nom, ou structure"></label>
+          <label class="field" for="f-email"><span>Email</span><input id="f-email" name="email" type="email" required placeholder="toi@exemple.fr"></label>
+          <label class="field" for="msg"><span>Message</span><textarea id="msg" name="message" rows="4" placeholder="Le lieu, la surface, l'envie, le délai…"></textarea></label>
+          <button type="submit" class="btn accent lg" style="width:100%">Envoyer <i data-lucide="send"></i></button>
+          <p class="form-note">Tes messages arrivent dans l'onglet Forms de ton tableau de bord Netlify, une fois le site en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ggm-footer">
+  <div class="ggm-wrap top">
+    <div class="brand">
+      <div class="row">
+        <img src="assets/logo-ggm-white.png" alt="Good Good Moods">
+        <strong>GOOD GOOD<br>MOODS</strong>
+      </div>
+      <p class="baseline">L'art urbain qui met tout le monde de bonne humeur.</p>
+    </div>
+    <div class="cols">
+      <nav>
+        <span class="lbl">Naviguer</span>
+        <a href="#collectif" data-goto="collectif">Le collectif</a>
+        <a href="#savoir-faire" data-goto="savoir-faire">Savoir-faire</a>
+        <a href="#ateliers" data-goto="ateliers">Ateliers</a>
+        <a href="#realisations" data-goto="realisations">Réalisations</a>
+        <a href="#contact" data-goto="contact">Contact</a>
+      </nav>
+      <div class="col">
+        <span class="lbl">Suivre</span>
+        <a href="https://instagram.com/good_good_moods" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg> @good_good_moods</a>
+        <a href="mailto:goodgoodmoods@gmail.com"><i data-lucide="mail"></i> goodgoodmoods@gmail.com</a>
+        <span class="line"><i data-lucide="map-pin"></i> Laval (53)</span>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="ggm-wrap inner">
+      <span>Association loi 1901 · © 2026 Good Good Moods · Laval (53)</span>
+      <button data-goto="top">Haut de page <i data-lucide="arrow-up"></i></button>
+    </div>
+  </div>
+</footer>
+
+<div id="lightbox" style="display:none"></div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
